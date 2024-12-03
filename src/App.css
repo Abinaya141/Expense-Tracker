@@ -1,38 +1,145 @@
-.App {
-  text-align: center;
+/* src/App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f6f8fc;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+.App {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+h1 {
+  color: #646464; /* Blue color */
+  text-align: center;
+  margin-bottom: 20px; /* Adds space below the header */
+}
+
+button {
+  background-color: #ffbb00;
   color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+button:hover {
+  background-color: #e6a800;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input,
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  flex: 1 1 calc(50% - 20px);
+}
+
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f3f4f7;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.05);
+}
+
+.expense-category {
+  font-weight: bold;
+}
+
+.expense-amount {
+  color: #ff3e3e;
+}
+
+.chart-container {
+  margin-top: 30px;
+}
+
+.summary-container {
+  margin-top: 30px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 24px;
+  }
+
+  button {
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .expense-category,
+  .expense-amount {
+    margin-bottom: 5px;
   }
 }
